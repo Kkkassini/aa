@@ -1,0 +1,338 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/rendering/proxy_box.dart', 'packages/animated_theme_switcher/src/clippers/theme_switcher_clipper.dart'], (function load__packages__animated_theme_switcher__src__theme_provider_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__rendering__proxy_box$46dart, packages__animated_theme_switcher__src__clippers__theme_switcher_clipper$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const async = dart_sdk.async;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const theme_data = packages__flutter__src__material__icon_button$46dart.src__material__theme_data;
+  const proxy_box = packages__flutter__src__rendering__proxy_box$46dart.src__rendering__proxy_box;
+  const theme_switcher_clipper = packages__animated_theme_switcher__src__clippers__theme_switcher_clipper$46dart.src__clippers__theme_switcher_clipper;
+  var theme_provider = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _InheritedThemeProviderL: () => (T._InheritedThemeProviderL = dart.constFn(dart.legacy(theme_provider._InheritedThemeProvider)))(),
+    StatefulWidgetL: () => (T.StatefulWidgetL = dart.constFn(dart.legacy(framework.StatefulWidget)))(),
+    StateOfStatefulWidgetL: () => (T.StateOfStatefulWidgetL = dart.constFn(framework.State$(T.StatefulWidgetL())))(),
+    StateLOfStatefulWidgetL: () => (T.StateLOfStatefulWidgetL = dart.constFn(dart.legacy(T.StateOfStatefulWidgetL())))(),
+    GlobalKeyOfStateLOfStatefulWidgetL: () => (T.GlobalKeyOfStateLOfStatefulWidgetL = dart.constFn(framework.GlobalKey$(T.StateLOfStatefulWidgetL())))(),
+    RenderRepaintBoundaryL: () => (T.RenderRepaintBoundaryL = dart.constFn(dart.legacy(proxy_box.RenderRepaintBoundary)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 300000
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 91,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 9,
+        [_Location_line]: 92,
+        [_Location_file]: null
+      });
+    },
+    get C2() {
+      return C[2] = dart.constList([C[3] || CT.C3, C[4] || CT.C4], T._LocationL());
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[2] || CT.C2,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 90,
+        [_Location_file]: "file:///C:/Users/xingzhou/Documents/flutter_windows_2.0.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/animated_theme_switcher-1.0.9/lib/src/theme_provider.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 7,
+        [_Location_line]: 89,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 90,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7, C[8] || CT.C8], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 88,
+        [_Location_file]: "file:///C:/Users/xingzhou/Documents/flutter_windows_2.0.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/animated_theme_switcher-1.0.9/lib/src/theme_provider.dart"
+      });
+    }
+  }, false);
+  var C = Array(9).fill(void 0);
+  var I = [
+    "file:///C:/Users/xingzhou/Documents/flutter_windows_2.0.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/animated_theme_switcher-1.0.9/lib/src/theme_provider.dart",
+    "package:animated_theme_switcher/src/theme_provider.dart"
+  ];
+  var child$ = dart.privateName(theme_provider, "ThemeProvider.child");
+  var initTheme$ = dart.privateName(theme_provider, "ThemeProvider.initTheme");
+  var duration$ = dart.privateName(theme_provider, "ThemeProvider.duration");
+  var Duration__duration = dart.privateName(core, "Duration._duration");
+  theme_provider.ThemeProvider = class ThemeProvider extends framework.StatefulWidget {
+    get child() {
+      return this[child$];
+    }
+    set child(value) {
+      super.child = value;
+    }
+    get initTheme() {
+      return this[initTheme$];
+    }
+    set initTheme(value) {
+      super.initTheme = value;
+    }
+    get duration() {
+      return this[duration$];
+    }
+    set duration(value) {
+      super.duration = value;
+    }
+    createState() {
+      return new theme_provider.ThemeProviderState.new();
+    }
+    static of(context) {
+      let inherited = context.dependOnInheritedWidgetOfExactType(T._InheritedThemeProviderL());
+      return inherited.data.theme;
+    }
+    static instanceOf(context) {
+      let inherited = context.dependOnInheritedWidgetOfExactType(T._InheritedThemeProviderL());
+      return inherited.data;
+    }
+  };
+  (theme_provider.ThemeProvider.new = function(opts) {
+    let initTheme = opts && 'initTheme' in opts ? opts.initTheme : null;
+    let key = opts && 'key' in opts ? opts.key : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    let duration = opts && 'duration' in opts ? opts.duration : C[0] || CT.C0;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[initTheme$] = initTheme;
+    this[child$] = child;
+    this[duration$] = duration;
+    if (!(duration != null)) dart.assertFailed(null, I[0], 14, 16, "duration != null");
+    theme_provider.ThemeProvider.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = theme_provider.ThemeProvider.prototype;
+  dart.addTypeTests(theme_provider.ThemeProvider);
+  dart.addTypeCaches(theme_provider.ThemeProvider);
+  dart.setMethodSignature(theme_provider.ThemeProvider, () => ({
+    __proto__: dart.getMethods(theme_provider.ThemeProvider.__proto__),
+    createState: dart.fnType(dart.legacy(theme_provider.ThemeProviderState), [])
+  }));
+  dart.setLibraryUri(theme_provider.ThemeProvider, I[1]);
+  dart.setFieldSignature(theme_provider.ThemeProvider, () => ({
+    __proto__: dart.getFields(theme_provider.ThemeProvider.__proto__),
+    child: dart.finalFieldType(dart.legacy(framework.Widget)),
+    initTheme: dart.finalFieldType(dart.legacy(theme_data.ThemeData)),
+    duration: dart.finalFieldType(dart.legacy(core.Duration))
+  }));
+  var theme = dart.privateName(theme_provider, "ThemeProviderState.theme");
+  var switcherGlobalKey = dart.privateName(theme_provider, "ThemeProviderState.switcherGlobalKey");
+  var clipper = dart.privateName(theme_provider, "ThemeProviderState.clipper");
+  var isBusy = dart.privateName(theme_provider, "ThemeProviderState.isBusy");
+  var image = dart.privateName(theme_provider, "ThemeProviderState.image");
+  var reverseAnimation = dart.privateName(theme_provider, "ThemeProviderState.reverseAnimation");
+  var _previewContainer = dart.privateName(theme_provider, "_previewContainer");
+  var _saveScreenshot = dart.privateName(theme_provider, "_saveScreenshot");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  theme_provider.ThemeProviderState = class ThemeProviderState extends framework.State$(dart.legacy(theme_provider.ThemeProvider)) {
+    get theme() {
+      return this[theme];
+    }
+    set theme(value) {
+      this[theme] = value;
+    }
+    get switcherGlobalKey() {
+      return this[switcherGlobalKey];
+    }
+    set switcherGlobalKey(value) {
+      this[switcherGlobalKey] = value;
+    }
+    get clipper() {
+      return this[clipper];
+    }
+    set clipper(value) {
+      this[clipper] = value;
+    }
+    get isBusy() {
+      return this[isBusy];
+    }
+    set isBusy(value) {
+      this[isBusy] = value;
+    }
+    get image() {
+      return this[image];
+    }
+    set image(value) {
+      this[image] = value;
+    }
+    get reverseAnimation() {
+      return this[reverseAnimation];
+    }
+    set reverseAnimation(value) {
+      this[reverseAnimation] = value;
+    }
+    get duration() {
+      return this.widget.duration;
+    }
+    initState() {
+      super.initState();
+      this.theme = this.widget.initTheme;
+    }
+    [_saveScreenshot]() {
+      return async.async(dart.void, (function* _saveScreenshot() {
+        let boundary = T.RenderRepaintBoundaryL().as(this[_previewContainer].currentContext.findRenderObject());
+        this.image = (yield boundary.toImage({pixelRatio: ui.window.devicePixelRatio}));
+      }).bind(this));
+    }
+    changeTheme(opts) {
+      let theme = opts && 'theme' in opts ? opts.theme : null;
+      let key = opts && 'key' in opts ? opts.key : null;
+      let clipper = opts && 'clipper' in opts ? opts.clipper : null;
+      let reverse = opts && 'reverse' in opts ? opts.reverse : null;
+      return async.async(dart.void, (function* changeTheme() {
+        if (dart.test(this.isBusy)) {
+          return;
+        }
+        yield this[_saveScreenshot]();
+        this.setState(dart.fn(() => {
+          let t0;
+          this.isBusy = true;
+          this.theme = theme;
+          this.switcherGlobalKey = key;
+          this.clipper = clipper;
+          this.reverseAnimation = (t0 = reverse, t0 == null ? false : t0);
+        }, T.VoidToNull()));
+        async.Timer.new(this.duration, dart.fn(() => {
+          this.isBusy = false;
+        }, T.VoidToNull()));
+      }).bind(this));
+    }
+    build(context) {
+      return new theme_provider._InheritedThemeProvider.new({data: this, child: new basic.RepaintBoundary.new({child: this.widget.child, key: this[_previewContainer], $creationLocationd_0dea112b090073317d4: C[1] || CT.C1}), $creationLocationd_0dea112b090073317d4: C[5] || CT.C5});
+    }
+  };
+  (theme_provider.ThemeProviderState.new = function() {
+    this[theme] = null;
+    this[switcherGlobalKey] = null;
+    this[clipper] = null;
+    this[isBusy] = false;
+    this[image] = null;
+    this[reverseAnimation] = null;
+    this[_previewContainer] = T.GlobalKeyOfStateLOfStatefulWidgetL().new();
+    theme_provider.ThemeProviderState.__proto__.new.call(this);
+    ;
+  }).prototype = theme_provider.ThemeProviderState.prototype;
+  dart.addTypeTests(theme_provider.ThemeProviderState);
+  dart.addTypeCaches(theme_provider.ThemeProviderState);
+  dart.setMethodSignature(theme_provider.ThemeProviderState, () => ({
+    __proto__: dart.getMethods(theme_provider.ThemeProviderState.__proto__),
+    [_saveScreenshot]: dart.fnType(dart.legacy(async.Future$(dart.void)), []),
+    changeTheme: dart.fnType(dart.void, [], {clipper: dart.legacy(theme_switcher_clipper.ThemeSwitcherClipper), key: dart.legacy(framework.GlobalKey$(dart.legacy(framework.State$(dart.legacy(framework.StatefulWidget))))), reverse: dart.legacy(core.bool), theme: dart.legacy(theme_data.ThemeData)}, {}),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setGetterSignature(theme_provider.ThemeProviderState, () => ({
+    __proto__: dart.getGetters(theme_provider.ThemeProviderState.__proto__),
+    duration: dart.legacy(core.Duration)
+  }));
+  dart.setLibraryUri(theme_provider.ThemeProviderState, I[1]);
+  dart.setFieldSignature(theme_provider.ThemeProviderState, () => ({
+    __proto__: dart.getFields(theme_provider.ThemeProviderState.__proto__),
+    theme: dart.fieldType(dart.legacy(theme_data.ThemeData)),
+    switcherGlobalKey: dart.fieldType(dart.legacy(framework.GlobalKey$(dart.legacy(framework.State$(dart.legacy(framework.StatefulWidget)))))),
+    clipper: dart.fieldType(dart.legacy(theme_switcher_clipper.ThemeSwitcherClipper)),
+    isBusy: dart.fieldType(dart.legacy(core.bool)),
+    image: dart.fieldType(dart.legacy(ui.Image)),
+    reverseAnimation: dart.fieldType(dart.legacy(core.bool)),
+    [_previewContainer]: dart.finalFieldType(dart.legacy(framework.GlobalKey$(dart.legacy(framework.State$(dart.legacy(framework.StatefulWidget))))))
+  }));
+  theme_provider._InheritedThemeProvider = class _InheritedThemeProvider extends framework.InheritedWidget {
+    updateShouldNotify(oldWidget) {
+      T._InheritedThemeProviderL().as(oldWidget);
+      return true;
+    }
+  };
+  (theme_provider._InheritedThemeProvider.new = function(opts) {
+    let data = opts && 'data' in opts ? opts.data : null;
+    let key = opts && 'key' in opts ? opts.key : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this.data = data;
+    theme_provider._InheritedThemeProvider.__proto__.new.call(this, {key: key, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = theme_provider._InheritedThemeProvider.prototype;
+  dart.addTypeTests(theme_provider._InheritedThemeProvider);
+  dart.addTypeCaches(theme_provider._InheritedThemeProvider);
+  dart.setMethodSignature(theme_provider._InheritedThemeProvider, () => ({
+    __proto__: dart.getMethods(theme_provider._InheritedThemeProvider.__proto__),
+    updateShouldNotify: dart.fnType(dart.legacy(core.bool), [dart.legacy(core.Object)])
+  }));
+  dart.setLibraryUri(theme_provider._InheritedThemeProvider, I[1]);
+  dart.setFieldSignature(theme_provider._InheritedThemeProvider, () => ({
+    __proto__: dart.getFields(theme_provider._InheritedThemeProvider.__proto__),
+    data: dart.finalFieldType(dart.legacy(theme_provider.ThemeProviderState))
+  }));
+  dart.trackLibraries("packages/animated_theme_switcher/src/theme_provider.dart", {
+    "package:animated_theme_switcher/src/theme_provider.dart": theme_provider
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["theme_provider.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAgBe;;;;;;IACG;;;;;;IACD;;;;;;;AAGqB;IAAoB;cAEvB;AACzB,sBACF,AAAQ,OAAD;AACX,YAAO,AAAU,AAAK,UAAN;IAClB;sBAEkD;AAC1C,sBACF,AAAQ,OAAD;AACX,YAAO,AAAU,UAAD;IAClB;;;QAxBO;QACD;QACW;QACV;;IAHA;IAEU;IACV;UACM,AAAS,QAAD;AACf,gEAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAuBX;;;;;;IACA;;;;;;IACW;;;;;;IAChB;;;;;;IACI;;;;;;IACJ;;;;;;;AAEoB,YAAA,AAAO;IAAQ;;AAMrB,MAAX;AACkB,MAAxB,aAAQ,AAAO;IACjB;;AAE4B;AACJ,qDAClB,AAAkB,AAAe;AACiC,QAAtE,cAAQ,MAAM,AAAS,QAAD,sBAAwB,AAAO;MACvD;;;UAGY;UACA;UACW;UAChB;AAJS;AAMd,sBAAI;AACF;;AAGqB,QAAvB,MAAM;AAQJ,QANF,cAAS;;AACM,UAAb,cAAS;AACS,UAAb,aAAQ,KAAK;AACK,UAAvB,yBAAoB,GAAG;AACD,UAAjB,eAAU,OAAO;AACa,UAAnC,yBAA2B,KAAR,OAAO,EAAP,aAAW;;AAK9B,QAFF,gBAAM,eAAU;AACA,UAAd,cAAS;;MAEb;;UAG0B;AACxB,YAAO,uDACC,aACC,sCACE,AAAO,wBACT;IAGX;;;IAzDU;IACA;IACW;IAChB,eAAS;IACL;IACJ;IAIC,0BAAoB;;;EAiD5B;;;;;;;;;;;;;;;;;;;;;;;;;;sCAYkD;AAC9C,YAAO;IACT;;;QARO;QACD;QACa;;IAFZ;AAGF,0EAAW,GAAG,SAAS,KAAK;;EAAC","file":"../../../../../../../../../../../packages/animated_theme_switcher/src/theme_provider.dart.lib.js"}');
+  // Exports:
+  return {
+    src__theme_provider: theme_provider
+  };
+}));
+
+//# sourceMappingURL=theme_provider.dart.lib.js.map
