@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:marketpulse_ui/XDAccueil.dart';
+
+import "package:marketpulse_ui/Gallery.dart";
+import 'package:marketpulse_ui/ui/home_page.dart';
+
+import 'package:flutter/scheduler.dart' show timeDilation;
+import 'package:animated_theme_switcher/animated_theme_switcher.dart';
+
+import 'theme_config.dart';
 
 void main() {
 
@@ -7,25 +14,20 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: XDAccueil()
-      // home: MyHomePage(title: 'Flutter Demo Home Page'),
+    final isPlatformDark =
+        WidgetsBinding.instance.window.platformBrightness == Brightness.dark;
+    final initTheme = isPlatformDark ? darkTheme : lightTheme;
+    return ThemeProvider(
+      initTheme: initTheme,
+      child: Builder(builder: (context) {
+        return MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeProvider.of(context),
+          home: HomePage(),
+        );
+      }),
     );
   }
 }
