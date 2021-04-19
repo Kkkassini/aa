@@ -113,7 +113,7 @@ class _TopBar extends State<TopBar> {
       child: Container(
         height: 70.0,
         decoration: BoxDecoration(
-            color: Colors.white,
+            //color: Colors.white,
             border: Border(bottom: BorderSide(color: Colors.black12))),
         child: Row(
           children: <Widget>[

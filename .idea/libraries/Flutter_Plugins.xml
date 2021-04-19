@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../../flutter_windows_2.0.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/animated_theme_switcher-1.0.9" />
+      <root url="file://$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.dartlang.org/animated_theme_switcher-1.0.9" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

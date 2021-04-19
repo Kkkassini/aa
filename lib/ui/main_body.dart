@@ -2,6 +2,7 @@ import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:marketpulse_ui/widgets/chart_goals.dart';
 import 'package:marketpulse_ui/widgets/details_list.dart';
+import 'package:marketpulse_ui/widgets/line_chart.dart';
 import 'package:marketpulse_ui/widgets/team_members.dart';
 import 'package:marketpulse_ui/widgets/top_bar.dart';
 
@@ -20,7 +21,7 @@ class _MainBodyState extends State<MainBody> {
           padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 50.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            children: <Widget>[TeamMembers(), DetailsList(), ChartAndGoals()],
+            children: <Widget>[TeamMembers(), DetailsList(), LineChartSample2()],
           ),
         ),
       );
@@ -28,7 +29,7 @@ class _MainBodyState extends State<MainBody> {
   @override
   Widget build(BuildContext context) {
     return ThemeSwitchingArea(child:Container(
-      color: Colors.grey[100],
+      //color: Colors.grey[100],
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[TopBar(), Expanded(child: _mainContainer()),

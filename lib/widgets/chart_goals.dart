@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ChartAndGoals extends StatelessWidget {
   Widget _chartCard() => Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          //color: Colors.white,
           borderRadius: BorderRadius.circular(10.0),
         ),
         child: Column(
