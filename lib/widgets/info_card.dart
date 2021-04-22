@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marketpulse_ui/model/statistics_info.dart';
+import 'package:marketpulse_ui/provider/ChangeThemeProvider.dart';
+import 'package:provider/provider.dart';
 
 class InfoCard extends StatelessWidget {
   final StatisticsInfo statisticsInfo;
@@ -148,22 +150,26 @@ class InfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 340,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10.0),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          _paddingContainer(_titleIconRow()),
-          _paddingContainer(_total()),
-          _paddingContainer(_percentChangeRow()),
-          _totalDailyContainer()
-        ],
-      ),
+    return Consumer<ChangeThemeProvider>(
+      builder: (context,change,_){
+        return Container(
+          width: 340,
+          decoration: BoxDecoration(
+            color: change.colorValue,
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              _paddingContainer(_titleIconRow()),
+              _paddingContainer(_total()),
+              _paddingContainer(_percentChangeRow()),
+              _totalDailyContainer()
+            ],
+          ),
+        );
+      },
     );
   }
 }

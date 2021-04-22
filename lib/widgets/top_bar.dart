@@ -2,6 +2,8 @@ import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:custom_switch/custom_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:marketpulse_ui/provider/ChangeThemeProvider.dart';
+import 'package:provider/provider.dart';
 
 import '../theme_config.dart';
 
@@ -79,66 +81,74 @@ class _TopBar extends State<TopBar> {
                 setState(() {
                   status = value;
                 });
-                ThemeSwitcher.of(context).changeTheme(
-                  theme: ThemeProvider.of(context).brightness ==
-                      Brightness.light
-                      ? darkTheme
-                      : lightTheme,
-                );
+//                ThemeSwitcher.of(context).changeTheme(
+//                  theme: ThemeProvider.of(context).brightness ==
+//                      Brightness.light
+//                      ? darkTheme
+//                      : lightTheme,
+//                );
+                Provider.of<ChangeThemeProvider>(context, listen: false)
+                    .setTheme(value ? ChangeThemeProvider().dark : ChangeThemeProvider().light,);
+                Provider.of<ChangeThemeProvider>(context, listen: false)
+                    .setColor(value ? 1:0);
               },
             )
           ],
         ),
       );
 
-  Widget _me() => Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Icon(Icons.person),
-            SizedBox(
-              width: 26,
-            ),
-            Text(
-              'Edgar',
-              style: TextStyle(fontSize: 18),
-            )
-          ],
-        ),
-      );
+  Widget _me() =>  Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(Icons.person),
+              SizedBox(
+                width: 26,
+              ),
+              Text(
+                'Edgar',
+                style: TextStyle(fontSize: 18),
+              )
+            ],
+          ),
+  );
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Container(
-        height: 70.0,
-        decoration: BoxDecoration(
-            //color: Colors.white,
-            border: Border(bottom: BorderSide(color: Colors.black12))),
-        child: Row(
-          children: <Widget>[
-            Flexible(
-              flex: 4,
-              child: _header(),
+      child: Consumer<ChangeThemeProvider>(
+        builder: (context,change,_){
+          return Container(
+            height: 70.0,
+            decoration: BoxDecoration(
+                color: change.colorValue,
+                border: Border(bottom: BorderSide(color: Colors.black12))),
+            child: Row(
+              children: <Widget>[
+                Flexible(
+                  flex: 4,
+                  child: _header(),
+                ),
+                Flexible(
+                  flex: 8,
+                  child: _search(),
+                ),
+                Flexible(
+                  flex: 1,
+                  child: _notifications(),
+                ),
+                Flexible(
+                  flex: 1,
+                  child: _settings(),
+                ),
+                Flexible(
+                  flex: 3,
+                  child: _me(),
+                )
+              ],
             ),
-            Flexible(
-              flex: 8,
-              child: _search(),
-            ),
-            Flexible(
-              flex: 1,
-              child: _notifications(),
-            ),
-            Flexible(
-              flex: 1,
-              child: _settings(),
-            ),
-            Flexible(
-              flex: 3,
-              child: _me(),
-            )
-          ],
-        ),
+          );
+        },
       ),
     );
   }

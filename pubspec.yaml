@@ -32,6 +32,9 @@ dependencies:
   adobe_xd: ^1.0.0
   charts_flutter: ^0.10.0
   fl_chart: ^0.35.0
+  provider: ^5.0.0
+  twitter_kit: ^0.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
