@@ -22,7 +22,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
       borderRadius: BorderRadius.circular(10.0),
     ),
     child: Center(
-      child: Text("Test"),
+      child: Text("Tweet feeds Area"),
     ),
   );
 
@@ -52,35 +52,41 @@ class _LineChartSample2State extends State<LineChartSample2> {
                  height: 300,
                  child: Row(
                   children: <Widget>[
-                    AspectRatio(
-                      aspectRatio: 3.25,
-                      child: Container(
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(18),
+                    Expanded(
+                      flex: 10,
+                      child: AspectRatio(
+                        aspectRatio: 2,
+                        child: Container(
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(18),
+                              ),
+                              color: Color(0xff232d37)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 18.0, left: 12.0, top: 24, bottom: 12),
+                            child: LineChart(
+                              showAvg ? avgData() : mainData(),
                             ),
-                            color: Color(0xff232d37)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 18.0, left: 12.0, top: 24, bottom: 12),
-                          child: LineChart(
-                            showAvg ? avgData() : mainData(),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: 60,
-                      height: 34,
-                      child: FlatButton(
-                        onPressed: () {
-                          setState(() {
-                            showAvg = !showAvg;
-                          });
-                        },
-                        child: Text(
-                          'avg',
-                          style: TextStyle(
-                              fontSize: 12, color: showAvg ? Colors.white.withOpacity(0.5) : Colors.white),
+                    Expanded(
+                      flex: 1,
+                      child: SizedBox(
+                        width: 30,
+                        height: 34,
+                        child: FlatButton(
+                          onPressed: () {
+                            setState(() {
+                              showAvg = !showAvg;
+                            });
+                          },
+                          child: Text(
+                            'avg',
+                            style: TextStyle(
+                                fontSize: 12, color: showAvg ? Colors.white.withOpacity(0.5) : Colors.white),
+                          ),
                         ),
                       ),
                     ),

@@ -2,7 +2,6 @@ import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:marketpulse_ui/provider/ChangeThemeProvider.dart';
 import 'package:marketpulse_ui/ui/main_body.dart';
-import 'package:marketpulse_ui/ui/side_menu.dart';
 import 'package:provider/provider.dart';
 import 'package:marketpulse_ui/provider/ChangeThemeProvider.dart';
 
